@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+const child_process = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+const TANGERINE_DIRECTORY = '$HOME/.tangerine';
+
+console.log('Updating Tangerine...');
+
+child_process.spawnSync(
+    'npm',
+    [
+        'i',
+        `--prefix ${TANGERINE_DIRECTORY}/`,
+        '@purple-gem-studio/tangerine'
+    ]
+);
+
+console.log('Updated complete.');
+
+child_process.spawnSync(
+    'cd',
+    [
+        `${TANGERINE_DIRECTORY}/node_modules/@purple-gem-studio/tangerine/`
+    ]
+);
+
+console.log('Launching the Tangerine client.');
+
+child_process.spawnSync(
+    'npm',
+    [
+        'start'
+    ]
+);

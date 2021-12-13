@@ -1,8 +1,11 @@
 {
   "name": "@purple-gem-studio/tangerine",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "A graphical frontend for Spork.",
   "main": "src/main.js",
+  "bin": {
+    "tangerine": "bin/tangerine"
+  },
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,16 +26,18 @@
     "desktop",
     "app"
   ],
-  "author": "Joseph Caruso",
+  "author": "Joseph Caruso <InhaleTheRice@purplegem.studio> (InhaleTheRice)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Purple-Gem-Studio/tangerine/issues"
   },
   "homepage": "https://github.com/Purple-Gem-Studio/tangerine#readme",
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
     "@types/node": "^16.11.12"
   },
   "dependencies": {
+    "@purple-gem-studio/tangerine": "^1.0.0-alpha.1",
     "electron": "^16.0.4"
   }
 }
