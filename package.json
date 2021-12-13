@@ -1,0 +1,38 @@
+{
+  "name": "@purple-gem-studio/tangerine",
+  "version": "1.0.0-alpha",
+  "description": "A graphical frontend for Spork.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Purple-Gem-Studio/tangerine.git"
+  },
+  "keywords": [
+    "spork",
+    "host",
+    "join",
+    "p2p",
+    "server",
+    "gui",
+    "graphical",
+    "frontend",
+    "desktop",
+    "app"
+  ],
+  "author": "Joseph Caruso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Purple-Gem-Studio/tangerine/issues"
+  },
+  "homepage": "https://github.com/Purple-Gem-Studio/tangerine#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.12"
+  },
+  "dependencies": {
+    "electron": "^16.0.4"
+  }
+}
