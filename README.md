@@ -7,5 +7,5 @@ A graphical frontend for Spork.
 To install via Node.js, run the following command:
 
 ```sh
-npm -i g @purple-gem-studio/tangerine
+npm i -g @purple-gem-studio/tangerine
 ```
