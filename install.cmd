@@ -2,18 +2,15 @@
 
 PURPLE_GEM_STUDIO_DIRECTORY="$HOME/.purple-gem-studio"
 TANGERINE_INSTALL_DIRECTORY="$PURPLE_GEM_STUDIO_DIRECTORY/tangerine"
-TANGERINE_DIRECTORY="$TANGERINE_INSTALL_DIRECTORY/node_modules/tangerine"
-TANGERINE_LAUNCHER_PATH="$TANGERINE_DIRECTORY/bin/"
+TANGERINE_DIRECTORY="$TANGERINE_INSTALL_DIRECTORY/node_modules/@purple-gem-studio/tangerine"
+TANGERINE_LAUNCHER_PATH="$TANGERINE_DIRECTORY/bin/tangerine"
 
 echo "Installing Tangerine..."
 
 npm i --prefix $TANGERINE_INSTALL_DIRECTORY @purple-gem-studio/tangerine
 
-echo "Install complete."
-
 del /Applications/tangerine
-cp $TANGERINE_LAUNCHER_PATH /Applications/tangerine
+cp $TANGERINE_LAUNCHER_PATH $HOME/Desktop/Tangerine
 
-echo "Launching the Tangerine app."
+echo "Installation complete."
 
-tangerine
