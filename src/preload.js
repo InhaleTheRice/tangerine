@@ -1,4 +1,5 @@
 const Spork = require('./spork');
+const { uninstallSpork, uninstallTangerine } = require('./uninstall');
 
 function getPort() {
     const urlParams = getURLParams();
@@ -90,4 +91,8 @@ if (url.includes('assets/pages/host/index.html')) {
             }
         }, 1000);
     }
+} else if (url.includes('assets/pages/uninstall_spork/index.html')) {
+    uninstallSpork();
+} else if (url.includes('assets/pages/uninstall_tangerine/index.html')) {
+    uninstallTangerine();
 }

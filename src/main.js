@@ -31,7 +31,7 @@ function installSporkIfMissing() {
             }
 
             // If Spork is already installed, return
-            if (stdout === '1.3.3') {
+            if (stdout.includes('1.3.3')) {
                 return;
             }
 

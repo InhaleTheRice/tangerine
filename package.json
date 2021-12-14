@@ -1,6 +1,6 @@
 {
   "name": "@purple-gem-studio/tangerine",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.3.1",
   "description": "A graphical frontend for Spork.",
   "main": "src/main.js",
   "bin": {
