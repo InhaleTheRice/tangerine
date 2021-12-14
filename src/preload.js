@@ -45,18 +45,20 @@ if (url.includes('assets/pages/host/index.html')) {
     console.log(window.publicKey);
 
     window.onload = function () {
-        // Update the port and public-key display text
-        const portElement = document.getElementById('port');
-        const publicKeyElement = document.getElementById('publicKey');
-    
+        // Update the port display text
+        const portElement = document.getElementById('port');    
         portElement.innerText = "Port: " + getPort();
+
+        // Get the public key and update the display text to reflect it
+        const publicKeyElement = document.getElementById('publicKey');
 
         var intervalId = window.setInterval(() => {
             const publicKey = getPublicKey();
 
-            publicKeyElement.innerText = "Public key: " + publicKey;
-            
+            // If the public key has been obtained, update the public key
             if (publicKey !== null) {
+                publicKeyElement.innerText = "Public key: " + publicKey;
+
                 window.clearInterval(intervalId);
             }
         }, 1000);

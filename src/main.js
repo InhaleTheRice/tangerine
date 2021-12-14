@@ -3,17 +3,6 @@ const child_process = require('child_process');
 const {app, BrowserWindow} = require('electron');
 const path = require('path');
 
-// Install Spork
-child_process.spawnSync(
-    // npm i -g spork
-    'npm',
-    [
-        'i',
-        '-g',
-        'spork'
-    ]
-);
-
 function createWindow () {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
@@ -31,6 +20,56 @@ function createWindow () {
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
 }
+
+function installSporkIfMissing() {
+    // Check if Spork is already installed
+    child_process.exec(
+        'spork -v',
+        (error, stdout, stderr) => {
+            if (error) {
+                console.error(stderr);
+            }
+
+            // If Spork is already installed, return
+            if (stdout === '1.3.3') {
+                return;
+            }
+
+            // Install Spork
+            console.log('Installing: spork (v1.3.3)');
+
+            const installCommand = 'npm i -g @atek-cloud/spork@^1.3.3';
+
+            try {
+                child_process.execSync(installCommand);
+            } catch {
+                child_process.execSync(`sudo ${installCommand}`);
+            }
+
+            console.log('Installed: spork (v1.3.3)');
+        }
+    )
+}
+
+function updateTangerine() {
+    const TANGERINE_DIRECTORY = '$HOME/.purple-gem-studio/tangerine';
+
+    child_process.execSync(`npm i --prefix ${TANGERINE_DIRECTORY}/ @purple-gem-studio/tangerine`);
+}
+
+// Install Spork if missing
+installSporkIfMissing();
+
+// Update Tangerine
+console.log('Updating: tangerine');
+
+updateTangerine();
+
+console.log('Update complete: tangerine');
+
+// TODO: Check if this version of Tangerine matches the previous version.
+//       If not, prompt the user to restart Tangerine for the installed changes
+//       to take full effect.
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
