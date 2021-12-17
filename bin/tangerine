@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-PURPLE_GEM_STUDIO_DIRECTORY=".purple-gem-studio"
-TANGERINE_INSTALL_DIRECTORY="$PURPLE_GEM_STUDIO_DIRECTORY/tangerine"
-TANGERINE_DIRECTORY="$TANGERINE_INSTALL_DIRECTORY/node_modules/@purple-gem-studio/tangerine"
-
-cd $TANGERINE_DIRECTORY/
-
-npm start

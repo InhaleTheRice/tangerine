@@ -52,9 +52,9 @@ function installSporkIfMissing() {
 }
 
 function updateTangerine() {
-    const TANGERINE_DIRECTORY = '$HOME/.purple-gem-studio/tangerine';
+    // const TANGERINE_DIRECTORY = '$HOME/.purple-gem-studio/tangerine';
 
-    child_process.execSync(`npm i --prefix ${TANGERINE_DIRECTORY}/ @purple-gem-studio/tangerine`);
+    // child_process.execSync(`npm i --prefix ${TANGERINE_DIRECTORY}/ @purple-gem-studio/tangerine`);
 }
 
 // Install Spork if missing
