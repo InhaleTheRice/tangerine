@@ -1,13 +1,12 @@
 {
   "name": "@purple-gem-studio/tangerine",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.4.2",
   "description": "A graphical frontend for Spork.",
   "main": "src/main.js",
   "bin": {
     "tangerine": "bin/tangerine"
   },
   "scripts": {
-    "build": "asar pack . build/app.asar",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,7 +33,6 @@
   },
   "homepage": "https://github.com/Purple-Gem-Studio/tangerine#readme",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.61",
     "@types/node": "^16.11.12"
   },
   "dependencies": {

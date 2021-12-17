@@ -11,12 +11,12 @@ Spork.bind = function (port, publicKey) {
 
     if (typeof publicKey === 'undefined' || publicKey === null) {
         // Request Spork to reverse-bind the given port.
-        sporkProcess = child_process.spawn('spork', [ 'bind', '-p', port ]);
-        
+        sporkProcess = child_process.spawn('spork.cmd', [ 'bind', '-p', port ]);
+
         Spork.processOutputs[port] = '';
         Spork.processes[port] = sporkProcess;
         Spork.publicKeys[port] = null;
-        
+
         sporkProcess.stdout.on('data', function (buffer) {
             // Add the incoming data buffer to the process' output
             Spork.processOutputs[port] += buffer.toString();
@@ -25,7 +25,7 @@ Spork.bind = function (port, publicKey) {
         });
     } else if (typeof publicKey === 'string') {
         // Request Spork to forward-bind the socket to the given port.
-        sporkProcess = child_process.exec(`spork bind ${publicKey} -p ${port}`);
+        sporkProcess = child_process.exec(`spork.cmd bind ${publicKey} -p ${port}`);
         console.log(`forward proxy: ${publicKey}`);
     } else {
         // An invalid public key was passed as an argument; throw an error.
@@ -87,7 +87,7 @@ function parseBindOutput(stdout) {
 function updatePublicKey(port) {
     const stdout = Spork.processOutputs[port];
 
-    const bindOutput = parseBindOutput(stdout); 
+    const bindOutput = parseBindOutput(stdout);
 
     Spork.publicKeys[port] = bindOutput.publicKey;
 
