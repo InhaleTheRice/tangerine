@@ -9,6 +9,7 @@ function createWindow () {
         width: 500,
         height: 375,
         backgroundColor: '#616161',
+        icon:'assets/icons/tangerine.png',
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
