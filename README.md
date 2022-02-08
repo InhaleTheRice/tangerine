@@ -1,6 +1,6 @@
 # Tangerine
 
-A graphical frontend for Spork.
+A desktop application enabling P2P connections between two or more devices on different networks.
 
 ## How to Install
 
