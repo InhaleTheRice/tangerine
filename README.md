@@ -2,10 +2,6 @@
 
 A graphical frontend for Spork.
 
-## Installation
+## How to Install
 
-To install via Node.js, run the following command:
-
-```sh
-npm i -g @purple-gem-studio/tangerine
-```
+Download the executable for your platform from the [Releases](https://github.com/Purple-Gem-Studio/tangerine/releases) page.
