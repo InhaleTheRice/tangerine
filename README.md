@@ -19,4 +19,4 @@ Open a terminal and run the following command:
 npm un -g spork
 ```
 
-*(Spork is an additional dependency that must be installed globally to function, and as such, I've created [Tangerine Pie](https://github.com/spicy-ashes/tangerine-pie) to bring the features provided by the Spork CLI to Node.js as a high-level API. This makes the global dependency no longer necessary, and it can be safely uninstalled when you download any release after - **but not including** - 1.0.0-alpha.4.2.)*
+*(Spork is an additional dependency that must be installed globally for Tangerine to function as intended, and as such, I've created [Tangerine Pie](https://github.com/spicy-ashes/tangerine-pie) to bring the features provided by the Spork CLI to Node.js as a high-level API. This makes the global dependency no longer necessary, and it can be safely uninstalled when you download any release after - **but not including** - 1.0.0-alpha.4.2.)*
